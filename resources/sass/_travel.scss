@@ -1,0 +1,184 @@
+body {
+    font-family: $font-family-sans-serif;
+}
+.bg-dark {
+    background-color: $blue !important;
+}
+.bg-dark .navbar-brand {
+    color: $indigo;
+    font-family: $font-family-title;
+    font-size: 2rem;
+    &:hover {
+        color: $yellow;
+    }
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
+}
+.navbar-nav .nav-item .nav-link {
+    color: $indigo;
+}
+.Capital::first-letter {
+    text-transform: uppercase;
+}
+.title {
+    font-family: $font-family-title;
+    color: $pink;
+}
+h1,
+h2,
+h3 {
+    font-family: $font-family-subtitle;
+}
+.travel-meta {
+    margin: 1rem 0 0.5rem 0;
+}
+.subtitle {
+    font-weight: 700;
+    color: $orange;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: baseline;
+}
+.subtitle .text {
+    font-weight: 300;
+    font-family: $font-family-sans-serif;
+    color: #000000;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+trix-editor {
+    min-height: 15rem;
+}
+.icon {
+    width: 5rem;
+    height: 5rem;
+}
+.iconViaje {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: $yellow;
+}
+em {
+    color: $pink;
+}
+strong {
+    font-weight: 1.1rem;
+    color: $pink;
+}
+div {
+    color: #000000;
+}
+
+.titulo-categoria {
+    color: #333;
+    font-family: $font-family-subtitle;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #f0a500 !important;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    padding-right: 2rem;
+    @media (max-width: 768px) {
+        font-size: 1.4rem;
+    }
+}
+.card-carousel {
+    width: 30% !important;
+    margin: 0 5% 5% 0;
+    @media (max-width: 900px) {
+        width: 100% !important;
+        margin: 0;
+    }
+    .wrapperimg {
+        width: 100%;
+        height: 40%;
+        .img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .wrapperinfo {
+        width: 100%;
+        height: 60%;
+        .titulo {
+            color: $cyan;
+            font-size: 1.2rem;
+            @media (max-width: 900px) {
+                font-size: 1rem;
+            }
+        }
+        .description {
+            font-size: 0.9rem;
+            text-align: justify;
+            @media (max-width: 900px) {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+.categorias-bg {
+    background-color: $white;
+    .nav-link {
+        color: #222 !important;
+        display: inline-block;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        overflow: hidden;
+        position: relative;
+        text-decoration: none;
+        font-size: 0.9rem !important;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            transition: transform 0.5s ease;
+        }
+        &:before {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+            background: $yellow;
+            transform: translateX(-100%);
+        }
+        &:hover:before {
+            transform: translateX(0);
+        }
+    }
+}
+.hero-categorias {
+    background-image: linear-gradient(
+            to bottom,
+            rgba(70, 70, 70, 0.4),
+            rgba(53, 53, 53, 0.571)
+        ),
+        url("../images/background_search.jpg");
+    height: 30rem;
+    background-size: cover;
+    background-position: center;
+    .texto-buscar {
+        p {
+            font-size: 1.4rem;
+            color: #fff;
+        }
+    }
+}
+.errorText {
+    text-align: center;
+    font-size: 1.4rem;
+    @media (max-width: 900px) {
+        font-size: 1.2rem;
+    }
+}
+.errorImage {
+    width: 30rem;
+    height: 30rem;
+    @media (max-width: 900px) {
+        width: 22rem;
+        height: 22rem;
+    }
+}
