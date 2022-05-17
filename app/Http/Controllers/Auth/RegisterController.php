@@ -50,18 +50,12 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:35'],
-            'email' => ['required', 'string', 'email', 'max:60', 'unique:users'],
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'url_video' => ['required', 'string', 'url',]
-        ], $messages = [
-            'name.required' => '¡Necesitamos saber tu nombre!',
-            'email.required' => '¡Necesitas un correo eléctronico!',
-            'password.required' => 'Coloca un password, no es seguro dejarlo vácio',
-            'password.min' => 'coloca un password seguro de al menos 8 caracteres',
-            'url_video.required' => 'Compartenos tu red social donde coloques tus videos',
         ]);
     }
+
     /**
      * Create a new user instance after a valid registration.
      *
@@ -74,7 +68,6 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'url_video' => $data['url_video'],
         ]);
     }
 }
