@@ -1,5 +1,5 @@
 ---
-title: Laravel
+title: SocialTravel
 description: A Laravel app that connects to a PostgreSQL database
 tags:
   - php
